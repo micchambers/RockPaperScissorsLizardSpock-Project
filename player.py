@@ -28,4 +28,12 @@ class Human(Player):
     def __init__(self) -> None:
         super().__init__()
 
+    def get_move(self):
+        while True:
+            user_move = input("Enter your move: ").lower()
+            if user_move in moves:
+                self.move = user_move
+                break
+            print("Invalid move. Please try again.")
+
     

@@ -9,7 +9,7 @@ class Game:
 
     def game_start(self):
         self.active = True
-        round_number = 1
+        round_number = 3
         while round_number <= 3 and self.active == True:
             if round_number >= 0:
                 print(f"Round {round_number}:")
