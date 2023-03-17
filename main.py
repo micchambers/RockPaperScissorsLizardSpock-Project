@@ -17,6 +17,10 @@
 # Paper disproves Spock
 # Spock vaporizes Rock
 
+from player import Human
+from player import CPU
+from game import Game
+
 moves = ["rock", "paper", "scissors", "lizard", "spock"]
 
 winning_moves = {
