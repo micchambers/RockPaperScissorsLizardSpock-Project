@@ -1,18 +1,31 @@
+import random
+
 class Player:
+
     def __init__(self, name):
         self.name = name
+        self.points = 0
+        self.move = None
 
-    def set_move(self, move):
-        self.move = move
+    def get_move(self):
+        return self.move
 
-class CPU:
+
+
+class CPU(Player):
+
     def __init__(self):
-        pass
+        super().__init__() 
 
-    def random_item_picker(list):
+    def get_move(self):
         random_item = random.choice(list)
         return random_item
     
-class Human:
+
+
+class Human(Player):
+
     def __init__(self) -> None:
-        pass
+        super().__init__()
+
+    

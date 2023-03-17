@@ -17,8 +17,12 @@
 # Paper disproves Spock
 # Spock vaporizes Rock
 
-g1 = "rock"
-g2 = "paper"
-g3 = "scissors"
-g4 = "lizard"
-g5 = "spock"
+moves = ["rock", "paper", "scissors", "lizard", "spock"]
+
+winning_moves = {
+    "rock": ["scissors", "lizard"],
+    "paper": ["rock", "spock"],
+    "scissors": ["paper", "lizard"],
+    "lizard": ["paper", "spock"],
+    "spock": ["rock", "scissors"]
+}
