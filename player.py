@@ -36,7 +36,7 @@ class CPU(Player):
 
 class Human(Player):
 
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__()
 
     def get_move(self):

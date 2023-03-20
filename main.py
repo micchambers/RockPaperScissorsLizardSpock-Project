@@ -31,4 +31,7 @@ winning_moves = {
     "spock": ["rock", "scissors"]
 }
 
+player = Human()
 
+
+rpsls = Game()
