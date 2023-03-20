@@ -1,10 +1,20 @@
 import random
 
+moves = ["rock", "paper", "scissors", "lizard", "spock"]
+
+winning_moves = {
+    "rock": ["scissors", "lizard"],
+    "paper": ["rock", "spock"],
+    "scissors": ["paper", "lizard"],
+    "lizard": ["paper", "spock"],
+    "spock": ["rock", "scissors"]
+}
+
 class Player:
 
     def __init__(self, name):
         self.name = name
-        self.points = 0
+        self.score = 0
         self.move = None
 
     def get_move(self):
@@ -15,10 +25,11 @@ class Player:
 class CPU(Player):
 
     def __init__(self):
-        super().__init__() 
+        super().__init__()
+        self.name = 'CPU'
 
     def get_move(self):
-        random_item = random.choice(list)
+        random_item = random.choice(moves)
         return random_item
     
 
@@ -30,10 +41,11 @@ class Human(Player):
 
     def get_move(self):
         while True:
-            user_move = input("Enter your move: ").lower()
+            user_move = input("Enter your move: \n").lower()
             if user_move in moves:
                 self.move = user_move
                 break
-            print("Invalid move. Please try again.")
+            else:
+                print("Invalid move. Please try again.\n")
 
     
