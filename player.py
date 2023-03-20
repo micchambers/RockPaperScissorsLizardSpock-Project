@@ -12,8 +12,7 @@ winning_moves = {
 
 class Player:
 
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
         self.score = 0
         self.move = None
 
@@ -27,6 +26,8 @@ class CPU(Player):
     def __init__(self):
         super().__init__()
         self.name = 'CPU'
+        self.score = 0
+        self.move = None
 
     def get_move(self):
         random_item = random.choice(moves)
@@ -36,16 +37,18 @@ class CPU(Player):
 
 class Human(Player):
 
-    def __init__(self):
+    def __init__(self, name):
         super().__init__()
+        self.name = name
+        self.score = 0
+        self.move = None
+
 
     def get_move(self):
-        while True:
-            user_move = input("Enter your move: \n").lower()
-            if user_move in moves:
-                self.move = user_move
-                break
-            else:
-                print("Invalid move. Please try again.\n")
+        self.user_move = input("Enter your move: \n").lower()
+        if self.user_move in moves:
+            self.move = self.user_move
+        else:
+            print("Invalid move. Please try again.\n")
 
     
