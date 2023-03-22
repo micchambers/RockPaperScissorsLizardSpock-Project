@@ -49,6 +49,7 @@ class Human(Player):
         if self.user_move in moves:
             self.move = self.user_move
         else:
-            print("Invalid move. Please try again.\n")
+            print("Invalid move.\n")
+            return(self.get_move())
 
     

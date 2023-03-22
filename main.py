@@ -31,8 +31,12 @@ winning_moves = {
     "spock": ["rock", "scissors"]
 }
 
-p1 = Human("Micol")
-computer = CPU()
-rpsls = Game(p1, computer)
+# p1 = Human("P1")
 
-p1.get_move
+# p2 = Human("P2")
+
+# computer = CPU()
+
+# rpsls = Game()
+
+# rpsls.game_start() 
